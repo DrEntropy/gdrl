@@ -2,13 +2,14 @@
 
 This is a personal fork of [mimoralea/gdrl](https://github.com/mimoralea/gdrl), for my own use. It is not the official book repository.
 
-Chapter 6 runs locally with [uv](https://docs.astral.sh/uv/) and current Gymnasium. Other chapters still expect the original notebook APIs.
+Chapters 6 and 7 run locally with [uv](https://docs.astral.sh/uv/) and current Gymnasium. Other chapters still expect the original notebook APIs.
 
-## Running chapter 6
+## Running chapters 6 and 7
 
 ```bash
 uv sync
 uv run jupyter lab notebooks/chapter_06/chapter-06.ipynb
+uv run jupyter lab notebooks/chapter_07/chapter-07.ipynb
 ```
 
 ## About the book
