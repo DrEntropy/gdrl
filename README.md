@@ -1,21 +1,15 @@
 # Grokking Deep Reinforcement Learning
 
-**Note:** At the moment, only running the code from the [docker](https://github.com/docker/docker-ce) container (below) is supported. Docker allows for creating a single environment that is more likely to work on all systems. Basically, I install and configure all packages for you, except docker itself, and you just run the code on a tested environment. 
+This is a personal fork of [mimoralea/gdrl](https://github.com/mimoralea/gdrl), for my own use. It is not the official book repository.
 
-To install docker, I recommend a web search for "installing docker on \<your os here>". For running the code on a GPU, you have to additionally install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). NVIDIA Docker allows for using a host's GPUs inside docker containers. After you have docker (and nvidia-docker if using a GPU) installed, follow the three steps below. 
+Chapter 6 runs locally with [uv](https://docs.astral.sh/uv/) and current Gymnasium. Other chapters still expect the original notebook APIs.
 
-## Running the code
-  0. Clone this repo:  
-  `git clone --depth 1 https://github.com/mimoralea/gdrl.git && cd gdrl`
-  1. Pull the gdrl image with:  
-  `docker pull mimoralea/gdrl:v0.14`
-  2. Spin up a container:
-     - On Mac or Linux:  
-     `docker run -it --rm -p 8888:8888 -v "$PWD"/notebooks/:/mnt/notebooks/ mimoralea/gdrl:v0.14` 
-     - On Windows:  
-     `docker run -it --rm -p 8888:8888 -v %CD%/notebooks/:/mnt/notebooks/ mimoralea/gdrl:v0.14`
-     - NOTE: Use `nvidia-docker` or add `--gpus all` after `--rm` to the command, if you are using a GPU.
-  3. Open a browser and go to the URL shown in the terminal (likely to be: http://localhost:8888). The password is: `gdrl`
+## Running chapter 6
+
+```bash
+uv sync
+uv run jupyter lab notebooks/chapter_06/chapter-06.ipynb
+```
 
 ## About the book
 
