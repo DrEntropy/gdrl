@@ -12,6 +12,9 @@ dependencies = [
     "jupyterlab",
     "ipykernel",
     "ipywidgets",
+    "torch>=2.14.1",
+    "pygame>=2.6.1",
+    "moviepy>=2.2.1",
 ]
 
 [build-system]
